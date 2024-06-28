@@ -1,0 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
+export const useHandleGoBack = () => {
+  const navigate = useNavigate();
+
+  const handleGoback = () => {
+    navigate( "/");
+  };
+  return { handleGoback };
+};
