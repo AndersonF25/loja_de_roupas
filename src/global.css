@@ -18,13 +18,13 @@
   list-style: none;
 }
 
-body,html {
+body,
+html {
   background-color: #1c1c21;
-  &::-webkit-scrollbar{
-    width: 3px;
-    background-color: #1c1c21;
-  }
 
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
 }
 html,
 input,

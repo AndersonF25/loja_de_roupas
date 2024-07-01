@@ -2,14 +2,10 @@ import styled from "styled-components";
 
 export const ContainerModal = styled.div`
   width: 100%;
-  height: 25dvh;
+  height: 17dvh;
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(4.6px);
+background-color: var(--color-font-section);
   z-index: 100;
   animation: openModal linear 0.5s;
 
@@ -25,11 +21,11 @@ export const ContainerModal = styled.div`
 
 export const ContainerIcon = styled.div`
   width: 30px;
-  height: 20px;
+  height: 23px;
   background-color: transparent;
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 7px;
+  right: 9px;
 `;
 
 export const Form = styled.form`
@@ -43,12 +39,12 @@ export const Form = styled.form`
 
 export const Input = styled.input`
   width: 70%;
-  height: 50px;
+  height: 40px;
   border: none;
   background: #fff;
   border-radius: 5px;
   padding-left: 10px;
-  font-size: 1rem;
+  font-size: .93rem;
 
   &:focus {
     outline: none;

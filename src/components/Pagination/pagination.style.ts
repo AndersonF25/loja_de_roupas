@@ -5,6 +5,12 @@ export const NavPagination = styled.nav`
   display: grid;
   place-items: center;
   margin-bottom: 15px;
+  padding-top: 15px;
+
+
+  @media (max-width: 430px){
+    padding-top:20px ;
+  }
 
 `;
 

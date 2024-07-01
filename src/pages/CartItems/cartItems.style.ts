@@ -18,6 +18,7 @@ export const ContainerCart = styled.div`
   top: 0;
   right: 0;
   bottom: 0;
+  overflow: hidden;
 
   z-index: 150;
   animation: ${openCart} 0.5s linear;
