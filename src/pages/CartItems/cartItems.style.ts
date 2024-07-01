@@ -9,7 +9,6 @@ const openCart = keyframes`
     }
 `;
 
-
 export const ContainerCart = styled.div`
   width: 600px;
   height: 100dvh;
@@ -53,7 +52,6 @@ export const ContainerCloseIcon = styled.div`
   display: flex;
   justify-content: flex-start;
   padding: 5px;
-  
 `;
 
 export const Content = styled.div`
@@ -110,6 +108,13 @@ export const Span = styled.span`
   color: var(--bg-primary);
 `;
 
+export const Delivery = styled.span`
+  align-self: flex-end;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--bg-primary);
+`;
+
 export const FreeDelivery = styled.p`
   font-size: 0.9rem;
   color: var(--color-font-section);
@@ -118,9 +123,12 @@ export const FreeDelivery = styled.p`
 export const ContainerDelivery = styled.div`
   display: flex;
   width: 100%;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   justify-content: flex-end;
-  gap: 12px;
+  gap: 2px;
+
+
 `;
 
 export const BtnFinish = styled.button`

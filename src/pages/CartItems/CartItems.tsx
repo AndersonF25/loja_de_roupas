@@ -9,6 +9,7 @@ import {
   ContainerInfoPayment,
   ContainerWaningEmptyCart,
   Content,
+  Delivery,
   FreeDelivery,
   Infos,
   ListCards,
@@ -72,7 +73,7 @@ const CartItems = ({ setOpenCart }: CartItemsProps) => {
                 <Span>{formatCurrency(totalPrice)}</Span>
               </Infos>
               <Infos>
-                <Span>Entrega</Span>
+                <Delivery>Entrega</Delivery>
                 {cartItems.length >= 4 ? (
                   <FreeDelivery>Grátis</FreeDelivery>
                 ) : (

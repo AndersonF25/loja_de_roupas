@@ -77,24 +77,27 @@ const DinamicProducts = ({ query }: DinamicProductsProps) => {
   return (
     <Suspense fallback={<Loader />}>
       <Container>
-        <ContainerStandard>
-          {loading && <Loader />}
-          {error && <p>{error}</p>}
-          <SubMenu
-            handleAscendingPrice={() => sortItemsPerPrice("asc")}
-            handleDescendingPrice={() => sortItemsPerPrice("desc")}
-            handleAlphabeticOrder={() => sortItemsPerAlphabeticalOrder("A-Z")}
-          />
+        {error && <p>{error}</p>}
+        {loading ? (
+          <Loader />
+        ) : (
+          <ContainerStandard>
+            <SubMenu
+              handleAscendingPrice={() => sortItemsPerPrice("asc")}
+              handleDescendingPrice={() => sortItemsPerPrice("desc")}
+              handleAlphabeticOrder={() => sortItemsPerAlphabeticalOrder("A-Z")}
+            />
 
-          <DinamicPage items={currentItems} query={query} />
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onNext={nextPage}
-            onPrev={prevPage}
-            onPageChange={changeCurrentPage}
-          />
-        </ContainerStandard>
+            <DinamicPage items={currentItems} query={query} />
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onNext={nextPage}
+              onPrev={prevPage}
+              onPageChange={changeCurrentPage}
+            />
+          </ContainerStandard>
+        )}
       </Container>
     </Suspense>
   );

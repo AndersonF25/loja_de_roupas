@@ -43,38 +43,41 @@ const SearchResponse = () => {
 
   return (
     <>
-      {loading && <Loader />}
-      <Container>
-        <ContainerStandard direction="column">
-          <SubMenu
-            handleAscendingPrice={() => sortItemsPerPrice("asc")}
-            handleDescendingPrice={() => sortItemsPerPrice("desc")}
-            handleAlphabeticOrder={() => sortItemsPerAlphabeticalOrder("A-Z")}
-          />
-          <GridProducts>
-            {currentItems?.map((item) => (
-              <ContainerTemplate key={item.id}>
-                <Template
-                  item={item}
-                  id={item.id}
-                  quantity={item.quantity}
-                  title={item.title}
-                  thumbnail={item.thumbnail}
-                  price={item.price}
-                  pictures={item.pictures}
-                />
-              </ContainerTemplate>
-            ))}
-          </GridProducts>
-          <Pagination
-            onNext={nextPage}
-            onPageChange={changeCurrentPage}
-            onPrev={prevPage}
-            totalPages={totalPages}
-            currentPage={currentPage}
-          />
-        </ContainerStandard>
-      </Container>
+      {loading ? (
+        <Loader />
+      ) : (
+        <Container>
+          <ContainerStandard direction="column">
+            <SubMenu
+              handleAscendingPrice={() => sortItemsPerPrice("asc")}
+              handleDescendingPrice={() => sortItemsPerPrice("desc")}
+              handleAlphabeticOrder={() => sortItemsPerAlphabeticalOrder("A-Z")}
+            />
+            <GridProducts>
+              {currentItems?.map((item) => (
+                <ContainerTemplate key={item.id}>
+                  <Template
+                    item={item}
+                    id={item.id}
+                    quantity={item.quantity}
+                    title={item.title}
+                    thumbnail={item.thumbnail}
+                    price={item.price}
+                    pictures={item.pictures}
+                  />
+                </ContainerTemplate>
+              ))}
+            </GridProducts>
+            <Pagination
+              onNext={nextPage}
+              onPageChange={changeCurrentPage}
+              onPrev={prevPage}
+              totalPages={totalPages}
+              currentPage={currentPage}
+            />
+          </ContainerStandard>
+        </Container>
+      )}
     </>
   );
 };

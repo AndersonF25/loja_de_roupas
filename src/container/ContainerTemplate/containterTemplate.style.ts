@@ -14,6 +14,7 @@ export const ContainerTemplate = styled.div`
     box-shadow: 0px 3px 7px -1px rgba(89, 89, 89, 1);
   }
 
+
   @media (max-width : 1445px){
     height: 470px;
   }
