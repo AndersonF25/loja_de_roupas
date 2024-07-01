@@ -8,7 +8,7 @@ export const BtnScrollToTop = styled.button`
   position: fixed;
   z-index: 100;
   border: 1px solid black;
- 
+
   right: 15px;
   bottom: 15px;
   cursor: pointer;
@@ -20,9 +20,11 @@ export const BtnScrollToTop = styled.button`
   &:active {
     background-color: var(--color-font-section-hover);
     transition: all.2s;
+    outline: none;
+    border: none;
   }
 
-  @media (max-width : 900px) {
+  @media (max-width: 900px) {
     width: 33px;
     height: 33px;
     right: 10px;
