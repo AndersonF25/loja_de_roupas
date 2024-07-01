@@ -30,6 +30,9 @@ const Header = () => {
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [openCart, setOpenCart] = useState<boolean>(false);
 
+
+
+
   return (
     <ContainerHeader>
       <ContentHeader>

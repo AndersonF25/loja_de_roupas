@@ -10,8 +10,6 @@ const openCart = keyframes`
 `;
 
 
-
-
 export const ContainerCart = styled.div`
   width: 600px;
   height: 100dvh;
@@ -20,17 +18,17 @@ export const ContainerCart = styled.div`
   top: 0;
   right: 0;
   bottom: 0;
-  overflow-y: scroll;
+
   z-index: 150;
-  animation: ${openCart} .5s linear;
-  
+  animation: ${openCart} 0.5s linear;
 
   &::-webkit-scrollbar {
     width: 2px;
   }
 
-  @media (max-width:900px){
+  @media (max-width: 900px) {
     width: 100%;
+    height: 100dvh;
   }
 `;
 
@@ -54,6 +52,7 @@ export const ContainerCloseIcon = styled.div`
   display: flex;
   justify-content: flex-start;
   padding: 5px;
+  
 `;
 
 export const Content = styled.div`

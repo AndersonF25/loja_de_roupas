@@ -13,6 +13,14 @@ type MenuMobileProps = {
 };
 
 const MenuMobile = ({ setMenuIsVisible }: MenuMobileProps) => {
+
+
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) {
+      setMenuIsVisible(false);
+    }
+  });
   return (
     <>
       <GlobalStyle isMenuOpen />
