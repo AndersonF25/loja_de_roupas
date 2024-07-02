@@ -21,6 +21,7 @@ import {
 import { IoClose } from "react-icons/io5";
 import TemplateProductInCart from "../../components/TemplateProductInCart/TemplateProductInCart";
 import { useFormatCurrency } from "../../hooks/useFormatCurrency";
+import useModalClose from "../../hooks/useHandleCloseModal";
 
 type CartItemsProps = {
   setOpenCart: (value: boolean) => void;
@@ -43,12 +44,14 @@ const CartItems = ({ setOpenCart }: CartItemsProps) => {
     };
   }, []);
 
+  const { handleClose, isClosing } = useModalClose(setOpenCart);
+
   return (
-    <ContainerFather onClick={() => setOpenCart(!true)}>
-      <ContainerCart onClick={(e) => e.stopPropagation()}>
+    <ContainerFather onClick={handleClose}>
+      <ContainerCart isClosing={isClosing} onClick={(e) => e.stopPropagation()}>
         <ContainerCloseIcon>
           <IoClose
-            onClick={() => setOpenCart(!true)}
+            onClick={handleClose}
             size={40}
             cursor="pointer"
             color="#000"

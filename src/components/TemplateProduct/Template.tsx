@@ -33,7 +33,7 @@ const Template = ({ thumbnail, price, title, item }: Product) => {
         effect="blur"
       />
       <Title>{title.slice(0, 29)}...</Title>
-      <Divider />
+      <Divider style={{backgroundColor : "#ffffff"}}/>
       <Box
         display={"flex"}
         alignItems={"center"}
@@ -43,10 +43,16 @@ const Template = ({ thumbnail, price, title, item }: Product) => {
         <Price>{formatCurrency(price)}</Price>
       </Box>
       <ContainerBtn>
-        <BtnAddCart onClick={() => handleAddToCartItems(item)} title="Adicionar ao carrinho">
+        <BtnAddCart
+          onClick={() => handleAddToCartItems(item)}
+          title="Adicionar ao carrinho"
+        >
           <FaCartPlus />
         </BtnAddCart>
-        <BtnViewProduct onClick={() => navigate(`/product/${item.id}`)} title="Ver detalhes">
+        <BtnViewProduct
+          onClick={() => navigate(`/product/${item.id}`)}
+          title="Ver detalhes"
+        >
           <IoEye />
         </BtnViewProduct>
       </ContainerBtn>

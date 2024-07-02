@@ -1,12 +1,25 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes , css} from "styled-components";
+
+type ContainerCartProps = {
+  isClosing: boolean;
+}
 
 const openCart = keyframes`
- from {
-      transform: translateX(520px);
-    }
-    to {
-      transform: translateX(0);
-    }
+  from {
+    transform: translateX(520px);
+  }
+  to {
+    transform: translateX(0);
+  }
+`;
+
+const closeCart = keyframes`
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(520px);
+  }
 `;
 
 export const ContainerFather = styled.div`
@@ -17,9 +30,10 @@ export const ContainerFather = styled.div`
   background-color: rgb(0, 0, 0, 0.8);
   z-index: 150;
   overflow: hidden;
+  cursor: pointer;
 `;
 
-export const ContainerCart = styled.div`
+export const ContainerCart = styled.div<ContainerCartProps>`
   width: 600px;
   height: 100dvh;
   background-color: #fffafa;
@@ -30,7 +44,10 @@ export const ContainerCart = styled.div`
   overflow: hidden;
 
   z-index: 160;
-  animation: ${openCart} 0.5s linear;
+  animation: ${(props) =>
+    props.isClosing
+      ? css`${closeCart} 0.5s linear forwards`
+      : css`${openCart} 0.5s linear forwards`};
 
   &::-webkit-scrollbar {
     width: 2px;

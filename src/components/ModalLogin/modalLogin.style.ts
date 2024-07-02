@@ -10,6 +10,7 @@ export const ContainerModal = styled.section`
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.91);
   z-index: 200;
+  cursor: pointer;
 `;
 
 export const BtnClose = styled.button`

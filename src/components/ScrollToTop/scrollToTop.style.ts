@@ -7,7 +7,7 @@ export const BtnScrollToTop = styled.button`
   background-color: var(--color-font-section);
   position: fixed;
   z-index: 100;
-  border: 1px solid black;
+  border: 1px solid var(--border-color);
 
   right: 15px;
   bottom: 15px;

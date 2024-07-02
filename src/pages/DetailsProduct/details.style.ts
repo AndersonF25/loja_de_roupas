@@ -24,15 +24,15 @@ export const ContainerSwiper = styled.div`
   height: 100%;
 
   @media (max-width: 1000px) {
-    max-width: 60%;
+    max-width: 63%;
     height: 50%;
   }
   @media (max-width: 550px) {
-    max-width: 80%;
+    max-width: 90%;
     width: 100%;
   }
   @media (max-width: 420px) {
-    max-width: 95%;
+    max-width: 100%;
     width: 100%;
   }
 `;
@@ -142,9 +142,6 @@ export const Btn = styled.button`
   &:hover {
     background-color: #105769;
     transition: all.4s;
-  }
-  &:focus {
-    color: #c1c1c1;
   }
 
   @media (max-width: 550px) {
