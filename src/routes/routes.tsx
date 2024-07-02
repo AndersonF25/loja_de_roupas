@@ -1,9 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Loader from "../components/Loader/Loader";
-import Teste from "../pages/Teste";
 
-// Lazy loading das páginas
 const Home = lazy(() => import("../pages/Home/Home"));
 const DetailsProduct = lazy(
   () => import("../pages/DetailsProduct/DetailsProduct")
@@ -63,14 +61,6 @@ export const Router = () => {
         element={
           <Suspense fallback={<Loader />}>
             <SearchResponse />
-          </Suspense>
-        }
-      />
-      <Route
-        path="/teste"
-        element={
-          <Suspense fallback={<Loader />}>
-            <Teste />
           </Suspense>
         }
       />
