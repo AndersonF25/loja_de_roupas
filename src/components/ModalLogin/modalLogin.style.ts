@@ -53,7 +53,7 @@ export const Modal = styled.div<{ isCLosing: boolean }>`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 15px;
   background-color: var(--bg-primary);
   padding: 40px;
   animation: ${(props) =>
@@ -93,6 +93,10 @@ export const Login = styled.div`
     flex-direction: column;
     height: 30%;
   }
+
+  @media (max-width: 500px) {
+    gap: 5px;
+  }
 `;
 
 export const Register = styled(Login)``;
@@ -101,6 +105,11 @@ export const H2 = styled.h2`
   font-size: 2.1rem;
   font-weight: 500;
   color: var(--bg-secondary);
+
+  @media (max-width: 500px) {
+   font-size: 1.6rem;
+   font-weight: 600;
+  }
 `;
 
 export const Form = styled.form`
@@ -109,6 +118,9 @@ export const Form = styled.form`
   flex-direction: column;
   gap: 18px;
   justify-content: space-between;
+  @media (max-width: 500px) {
+    gap: 9px;
+  }
 `;
 
 export const ContainerInput = styled.div`
@@ -122,6 +134,10 @@ export const Label = styled.label`
   font-size: 1.1rem;
   font-weight: 500;
   color: var(--bg-secondary);
+
+  @media (max-width: 500px) {
+   font-size: .9rem;
+  }
 `;
 
 export const Input = styled.input`
@@ -132,6 +148,10 @@ export const Input = styled.input`
   border-radius: 3px;
   padding-left: 7px;
   font-size: 1.1rem;
+  @media (max-width: 500px) {
+   font-size: .9rem;
+   height: 35px;
+  }
 `;
 
 export const BtnAndNewPassword = styled.div`
@@ -160,6 +180,11 @@ export const BtnSubmit = styled.button`
   &:focus {
     outline: none;
     border: 1px solid var(--border-color);
+  }
+
+  @media (max-width: 500px) {
+   font-size: .9rem;
+   margin-top: 5px;
   }
 
   @media (max-width: 400px) {

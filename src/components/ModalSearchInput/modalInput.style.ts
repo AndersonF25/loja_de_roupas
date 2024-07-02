@@ -22,6 +22,7 @@ export const ContainerModal = styled.div<{ isClosing: boolean }>`
   width: 100%;
   height: 17dvh;
   position: absolute;
+  border-bottom: 1px solid #fff;
   inset: 0;
   background-color: var(--bg-primary);
   z-index: 100;

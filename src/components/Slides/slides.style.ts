@@ -5,6 +5,7 @@ export const ContainerCarousel = styled.div`
   height: 100%;
   margin-bottom: 60px;
   z-index: 0;
+  margin-top: 70px;
 
 `;
 
