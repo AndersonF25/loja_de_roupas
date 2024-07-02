@@ -115,7 +115,7 @@ export const ContainerInputAndIcon = styled.div`
   gap: 10px;
 
   @media (max-width: 900px) {
-    width: 170px;
+    width: 190px;
   }
 `;
 

@@ -9,17 +9,27 @@ const openCart = keyframes`
     }
 `;
 
+export const ContainerFather = styled.div`
+  width: 100vw;
+  height: 100dvh;
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0, 0, 0, 0.8);
+  z-index: 150;
+  overflow: hidden;
+`;
+
 export const ContainerCart = styled.div`
   width: 600px;
   height: 100dvh;
   background-color: #fffafa;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   overflow: hidden;
 
-  z-index: 150;
+  z-index: 160;
   animation: ${openCart} 0.5s linear;
 
   &::-webkit-scrollbar {
@@ -27,7 +37,7 @@ export const ContainerCart = styled.div`
   }
 
   @media (max-width: 900px) {
-    width: 100%;
+    width: 100dvw;
     height: 100dvh;
   }
 `;
@@ -128,8 +138,6 @@ export const ContainerDelivery = styled.div`
   align-items: flex-end;
   justify-content: flex-end;
   gap: 2px;
-
-
 `;
 
 export const BtnFinish = styled.button`

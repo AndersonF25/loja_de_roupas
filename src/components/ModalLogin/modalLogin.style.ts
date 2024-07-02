@@ -46,6 +46,17 @@ export const Modal = styled.div`
       transform: translateY(0);
     }
   }
+
+  @media (max-width: 1050px) {
+    max-width: 700px;
+  }
+  @media (max-width: 725px) {
+    max-width: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 `;
 
 export const Login = styled.div`
@@ -56,6 +67,13 @@ export const Login = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
+
+  @media (max-width: 725px) {
+    max-width: 95%;
+    width: 100%;
+    flex-direction: column;
+   height: 40%;
+  }
 `;
 
 export const Register = styled(Login)``;
