@@ -6,21 +6,21 @@ import { MyContext } from "../../context/Provider";
 import { useContext } from "react";
 
 type ModalProps = {
-  setOpenModal: (value: boolean) => void;
+  setOpenModalSearch: (value: boolean) => void;
 };
 
-const ModalSearchInput = ({ setOpenModal }: ModalProps) => {
+const ModalSearchInput = ({ setOpenModalSearch }: ModalProps) => {
   const { setSearchValue, handleSearch, searchValue } = useContext(MyContext);
 
   window.addEventListener("resize", () => {
     if (window.innerWidth > 900) {
-      setOpenModal(false);
+      setOpenModalSearch(false);
     }
   });
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 30) {
-      setOpenModal(false);
+      setOpenModalSearch(false);
     }
   });
 
@@ -29,7 +29,7 @@ const ModalSearchInput = ({ setOpenModal }: ModalProps) => {
       <ContainerIcon>
         <IoCloseOutline
           size={35}
-          onClick={() => setOpenModal(!true)}
+          onClick={() => setOpenModalSearch(!true)}
           color="#fff"
           cursor={"pointer"}
         />

@@ -20,6 +20,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import MenuMobile from "../MenuMobile/MenuMobile";
 import ModalSearchInput from "../ModalSearchInput/ModalSearchInput";
 import CartItems from "../../pages/CartItems/CartItems";
+import { FaUser } from "react-icons/fa";
+import ModalLogin from "../ModalLogin/ModalLogin";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -27,10 +29,9 @@ const Header = () => {
     useContext(MyContext);
 
   const [menuIsVisible, setMenuIsVisible] = useState<boolean>(false);
-  const [openModal, setOpenModal] = useState<boolean>(false);
+  const [openModalSearch, setOpenModalSearch] = useState<boolean>(false);
   const [openCart, setOpenCart] = useState<boolean>(false);
-
-
+  const [openModalLogin, setOpenModalLogin] = useState<boolean>(false);
 
   return (
     <ContainerHeader>
@@ -46,7 +47,7 @@ const Header = () => {
               value={searchValue}
             />
             <CiSearch
-              onClick={() => setOpenModal(true)}
+              onClick={() => setOpenModalSearch(true)}
               style={{
                 marginRight: 10,
                 cursor: "pointer",
@@ -71,6 +72,18 @@ const Header = () => {
             />
           </ContainerIcon>
 
+          <ContainerIcon title="entre ou cadastre-se">
+            <FaUser
+              style={{
+                width: "40px",
+                height: "25px",
+                cursor: "pointer",
+                color: "#fff",
+              }}
+              onClick={() => setOpenModalLogin(!false)}
+            />
+          </ContainerIcon>
+
           <MenuHamburguer onClick={() => setMenuIsVisible(!false)}>
             <GiHamburgerMenu size={35} />
           </MenuHamburguer>
@@ -79,9 +92,15 @@ const Header = () => {
             <MenuMobile setMenuIsVisible={setMenuIsVisible} />
           ) : null}
 
-          {openModal ? <ModalSearchInput setOpenModal={setOpenModal} /> : null}
+          {openModalSearch ? (
+            <ModalSearchInput setOpenModalSearch={setOpenModalSearch} />
+          ) : null}
 
           {openCart ? <CartItems setOpenCart={setOpenCart} /> : null}
+
+          {openModalLogin ? (
+            <ModalLogin setOpenModalLogin={setOpenModalLogin} />
+          ) : null}
         </ContainerInputAndIcon>
       </ContentHeader>
     </ContainerHeader>

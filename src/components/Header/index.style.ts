@@ -112,7 +112,7 @@ export const ContainerInputAndIcon = styled.div`
   width: 25%;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 
   @media (max-width: 900px) {
     width: 170px;
