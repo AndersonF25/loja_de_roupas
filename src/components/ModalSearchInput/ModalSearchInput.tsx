@@ -4,6 +4,7 @@ import { ContainerIcon, ContainerModal, Form, Input } from "./modalInput.style";
 
 import { MyContext } from "../../context/Provider";
 import { useContext } from "react";
+import useModalClose from "../../hooks/useHandleCloseModal";
 
 type ModalProps = {
   setOpenModalSearch: (value: boolean) => void;
@@ -16,20 +17,25 @@ const ModalSearchInput = ({ setOpenModalSearch }: ModalProps) => {
     if (window.innerWidth > 900) {
       setOpenModalSearch(false);
     }
+
+    return () => window.removeEventListener("resize", () => {});
   });
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 30) {
+    if (window.scrollY > 20) {
       setOpenModalSearch(false);
     }
+    return () => window.removeEventListener("scroll", () => {});
   });
 
+  const {handleClose,isClosing} = useModalClose(setOpenModalSearch)
+
   return (
-    <ContainerModal>
+    <ContainerModal isClosing ={isClosing}>
       <ContainerIcon>
         <IoCloseOutline
           size={35}
-          onClick={() => setOpenModalSearch(!true)}
+          onClick={handleClose}
           color="#fff"
           cursor={"pointer"}
         />

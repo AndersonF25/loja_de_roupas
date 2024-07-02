@@ -24,6 +24,7 @@ type ModalLoginProps = {
 };
 
 const ModalLogin = ({ setOpenModalLogin }: ModalLoginProps) => {
+  
   useEffect(() => {
     document.body.style.overflow = "hidden";
 

@@ -1,8 +1,8 @@
-import styled, { keyframes , css} from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 type ContainerCartProps = {
   isClosing: boolean;
-}
+};
 
 const openCart = keyframes`
   from {
@@ -46,8 +46,12 @@ export const ContainerCart = styled.div<ContainerCartProps>`
   z-index: 160;
   animation: ${(props) =>
     props.isClosing
-      ? css`${closeCart} 0.5s linear forwards`
-      : css`${openCart} 0.5s linear forwards`};
+      ? css`
+          ${closeCart} 0.7s linear forwards
+        `
+      : css`
+          ${openCart} 0.7s linear forwards
+        `};
 
   &::-webkit-scrollbar {
     width: 2px;

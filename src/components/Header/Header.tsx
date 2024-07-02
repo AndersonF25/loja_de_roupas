@@ -7,7 +7,7 @@ import {
   ContentHeader,
   Input,
   Logo,
-  MenuHamburguer,
+
   Quantity,
 } from "./index.style";
 
@@ -16,8 +16,7 @@ import { CiSearch } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { MyContext } from "../../context/Provider";
-import { GiHamburgerMenu } from "react-icons/gi";
-import MenuMobile from "../MenuMobile/MenuMobile";
+
 import ModalSearchInput from "../ModalSearchInput/ModalSearchInput";
 import CartItems from "../../pages/CartItems/CartItems";
 import { FaUser } from "react-icons/fa";
@@ -28,7 +27,7 @@ const Header = () => {
   const { handleSearch, setSearchValue, cartItems, searchValue } =
     useContext(MyContext);
 
-  const [menuIsVisible, setMenuIsVisible] = useState<boolean>(false);
+
   const [openModalSearch, setOpenModalSearch] = useState<boolean>(false);
   const [openCart, setOpenCart] = useState<boolean>(false);
   const [openModalLogin, setOpenModalLogin] = useState<boolean>(false);
@@ -83,14 +82,6 @@ const Header = () => {
               onClick={() => setOpenModalLogin(!false)}
             />
           </ContainerIcon>
-
-          <MenuHamburguer onClick={() => setMenuIsVisible(!false)}>
-            <GiHamburgerMenu size={35} />
-          </MenuHamburguer>
-
-          {menuIsVisible ? (
-            <MenuMobile setMenuIsVisible={setMenuIsVisible} />
-          ) : null}
 
           {openModalSearch ? (
             <ModalSearchInput setOpenModalSearch={setOpenModalSearch} />

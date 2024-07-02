@@ -45,6 +45,7 @@ export const BtnClose = styled.button`
   place-items: center;
   border-radius: 50%;
   padding: 1px;
+  z-index: 300;
 `;
 
 export const Modal = styled.div<{ isCLosing: boolean }>`
@@ -58,10 +59,10 @@ export const Modal = styled.div<{ isCLosing: boolean }>`
   animation: ${(props) =>
     props.isCLosing
       ? css`
-          ${closeModalLogin} 0.5s linear forwards
+          ${closeModalLogin} 0.7s linear forwards
         `
       : css`
-          ${openModalLogin} 0.5s linear forwards
+          ${openModalLogin} 0.7s linear forwards
         `};
 
   @media (max-width: 1050px) {

@@ -7,7 +7,7 @@ type UseModalCloseReturn = {
 
 const useModalClose = (
   setOpenModal: (value: boolean) => void,
-  animationDuration: number = 500
+  animationDuration: number = 700
 ): UseModalCloseReturn => {
   const [isClosing, setIsClosing] = useState(false);
 
