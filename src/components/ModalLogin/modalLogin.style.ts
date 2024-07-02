@@ -55,7 +55,10 @@ export const Modal = styled.div`
     width: 100%;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+   
+ 
+    justify-content: flex-start;
+
   }
 `;
 
@@ -72,7 +75,7 @@ export const Login = styled.div`
     max-width: 95%;
     width: 100%;
     flex-direction: column;
-   height: 40%;
+   height: 30%;
   }
 `;
 
@@ -141,6 +144,10 @@ export const BtnSubmit = styled.button`
   &:focus {
     outline: none;
     border: 1px solid var(--border-color);
+  }
+
+  @media (max-width : 400px){
+    width: 70%;
   }
 `;
 

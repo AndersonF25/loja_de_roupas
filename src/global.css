@@ -33,6 +33,7 @@ textarea:focus {
 body,
 html {
   background-color: #1c1c21;
+  touch-action: manipulation;
 
   &::-webkit-scrollbar {
     width: 0px;
