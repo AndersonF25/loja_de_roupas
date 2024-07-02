@@ -83,6 +83,7 @@ export const ContainerInfoPayment = styled.div`
   height: 24dvh;
   display: flex;
   flex-direction: column;
+  gap: 4px;
   justify-content: space-between;
   border-top: 1px solid #ccc;
   padding: 10px 0 0 0;

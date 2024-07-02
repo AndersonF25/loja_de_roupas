@@ -11,7 +11,6 @@ const DetailsProduct = lazy(
 const CartItems = lazy(() => import("../pages/CartItems/CartItems"));
 const Man = lazy(() => import("../pages/Categorys/Man/Man"));
 const Women = lazy(() => import("../pages/Categorys/Women/Women"));
-const Children = lazy(() => import("../pages/Categorys/Children/Children"));
 const SearchResponse = lazy(
   () => import("../pages/SearchResponse/SearchResponse")
 );
@@ -56,14 +55,6 @@ export const Router = () => {
         element={
           <Suspense fallback={<Loader />}>
             <Women />
-          </Suspense>
-        }
-      />
-      <Route
-        path="/children"
-        element={
-          <Suspense fallback={<Loader />}>
-            <Children />
           </Suspense>
         }
       />
