@@ -1,4 +1,22 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+
+const openModalLogin = keyframes`
+  from {
+    transform: translateY(-520px);
+  }
+  to {
+    transform: translateY(0);
+  }
+`;
+
+const closeModalLogin = keyframes`
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-520px);
+  }
+`;
 
 export const ContainerModal = styled.section`
   width: 100dvw;
@@ -29,7 +47,7 @@ export const BtnClose = styled.button`
   padding: 1px;
 `;
 
-export const Modal = styled.div`
+export const Modal = styled.div<{ isCLosing: boolean }>`
   max-width: 1000px;
   width: 100%;
   display: flex;
@@ -37,16 +55,14 @@ export const Modal = styled.div`
   gap: 20px;
   background-color: var(--bg-primary);
   padding: 40px;
-  animation: openModal 0.8s linear;
-
-  @keyframes openModal {
-    from {
-      transform: translateY(-800px);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
+  animation: ${(props) =>
+    props.isCLosing
+      ? css`
+          ${closeModalLogin} 0.5s linear forwards
+        `
+      : css`
+          ${openModalLogin} 0.5s linear forwards
+        `};
 
   @media (max-width: 1050px) {
     max-width: 700px;
@@ -56,10 +72,8 @@ export const Modal = styled.div`
     width: 100%;
     flex-direction: column;
     align-items: center;
-   
- 
-    justify-content: flex-start;
 
+    justify-content: flex-start;
   }
 `;
 
@@ -76,7 +90,7 @@ export const Login = styled.div`
     max-width: 95%;
     width: 100%;
     flex-direction: column;
-   height: 30%;
+    height: 30%;
   }
 `;
 
@@ -147,7 +161,7 @@ export const BtnSubmit = styled.button`
     border: 1px solid var(--border-color);
   }
 
-  @media (max-width : 400px){
+  @media (max-width: 400px) {
     width: 70%;
   }
 `;

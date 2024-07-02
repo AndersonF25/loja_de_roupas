@@ -17,6 +17,7 @@ import {
   Register,
 } from "./modalLogin.style";
 import { Divider } from "@mui/material";
+import useModalClose from "../../hooks/useHandleCloseModal";
 
 type ModalLoginProps = {
   setOpenModalLogin: (value: boolean) => void;
@@ -31,12 +32,14 @@ const ModalLogin = ({ setOpenModalLogin }: ModalLoginProps) => {
     };
   }, []);
 
+  const { handleClose,isClosing} = useModalClose(setOpenModalLogin)
+
   return (
-    <ContainerModal onClick={() => setOpenModalLogin(false)}>
+    <ContainerModal onClick={handleClose}>
       <BtnClose>
-        <IoMdClose onClick={() => setOpenModalLogin(false)} />
+        <IoMdClose onClick={handleClose} />
       </BtnClose>
-      <Modal onClick={(e) => e.stopPropagation()}>
+      <Modal onClick={(e) => e.stopPropagation()} isCLosing={isClosing}>
         <Login>
           <H2>Entrar</H2>
           <Form>
