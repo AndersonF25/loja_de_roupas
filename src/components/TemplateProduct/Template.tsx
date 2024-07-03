@@ -33,7 +33,7 @@ const Template = ({ thumbnail, price, title, item }: Product) => {
         effect="blur"
       />
       <Title>{title.slice(0, 29)}...</Title>
-      <Divider style={{backgroundColor : "#ffffff"}}/>
+      <Divider style={{ backgroundColor: "#ffffff" }} />
       <Box
         display={"flex"}
         alignItems={"center"}
