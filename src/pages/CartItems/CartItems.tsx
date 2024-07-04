@@ -44,6 +44,14 @@ const CartItems = ({ setOpenCart }: CartItemsProps) => {
     };
   }, []);
 
+  const frete = () => {
+    if (cartItems.length < 4) {
+      return 40;
+    } else {
+      return 0;
+    }
+  };
+
   const { handleClose, isClosing } = useModalClose(setOpenCart);
 
   return (
@@ -98,6 +106,10 @@ const CartItems = ({ setOpenCart }: CartItemsProps) => {
                       <Span>R$ 40,00</Span>
                     </ContainerDelivery>
                   )}
+                </Infos>
+                <Infos>
+                  <Span>Total</Span>
+                  <Span>{formatCurrency(totalPrice + frete())}</Span>
                 </Infos>
                 <BtnFinish>Finalizar pedido</BtnFinish>
               </ContainerInfoPayment>
