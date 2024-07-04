@@ -14,3 +14,7 @@ Tecnologias usadas nesse projeto:
 - swiper
 
 Está 100% responsivo e com algumas animações basicas de abertura e fechamento dos modais.
+
+
+
+link do projeto : https://loja-de-roupas-beryl.vercel.app/
