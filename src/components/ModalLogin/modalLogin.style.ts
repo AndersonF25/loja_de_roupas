@@ -107,8 +107,8 @@ export const H2 = styled.h2`
   color: var(--bg-secondary);
 
   @media (max-width: 500px) {
-   font-size: 1.6rem;
-   font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 600;
   }
 `;
 
@@ -136,7 +136,7 @@ export const Label = styled.label`
   color: var(--bg-secondary);
 
   @media (max-width: 500px) {
-   font-size: .9rem;
+    font-size: 0.9rem;
   }
 `;
 
@@ -149,8 +149,8 @@ export const Input = styled.input`
   padding-left: 7px;
   font-size: 1.1rem;
   @media (max-width: 500px) {
-   font-size: .9rem;
-   height: 35px;
+    font-size: 0.9rem;
+    height: 35px;
   }
 `;
 
@@ -183,8 +183,8 @@ export const BtnSubmit = styled.button`
   }
 
   @media (max-width: 500px) {
-   font-size: .9rem;
-   margin-top: 5px;
+    font-size: 0.9rem;
+    margin-top: 5px;
   }
 
   @media (max-width: 400px) {
