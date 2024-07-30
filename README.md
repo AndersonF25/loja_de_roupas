@@ -16,5 +16,7 @@ Tecnologias usadas nesse projeto:
 Está 100% responsivo e com algumas animações basicas de abertura e fechamento dos modais.
 
 
+Conheça o projeto 👇🏼
 
-link do projeto : https://loja-de-roupas-beryl.vercel.app/
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://loja-de-roupas-beryl.vercel.app/)
+
